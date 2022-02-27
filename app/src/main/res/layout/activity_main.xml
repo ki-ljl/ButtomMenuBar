@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/rg_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_main"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_home"
+            android:text="主页"
+            android:textSize="14sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_query"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_query"
+            android:text="查询"
+            android:textSize="14sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_predict"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_predict"
+            android:text="预测"
+            android:textSize="14sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_user"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_user"
+            android:text="个人中心"
+            android:textSize="14sp"/>
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/div_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_above="@id/rg_tab_bar"
+        android:background="@color/div_white" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/div_tab_bar"/>
+
+</RelativeLayout>
